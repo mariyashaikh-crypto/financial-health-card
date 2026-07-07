@@ -1,0 +1,21 @@
+POST http://127.0.0.1:5000/predict
+Content-Type: application/json
+
+{
+  "industry_type": "Food",
+  "business_age_years": 18,
+  "monthly_revenue": 250000,
+  "monthly_expense": 180000,
+  "gst_compliance_score": 92,
+  "gst_turnover": 240000,
+  "upi_transaction_count": 150,
+  "upi_transaction_amount": 190000,
+  "employee_count": 12,
+  "existing_loan_amount": 500000,
+  "monthly_emi": 18000,
+  "credit_score": 760,
+  "debt_to_income_ratio": 0.35,
+  "repayment_history": "Good",
+  "revenue_growth_percent": 18,
+  "default_risk": 0
+}
