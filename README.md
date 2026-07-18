@@ -1,143 +1,236 @@
-# Financial Health Card for MSMEs
+# 🏦 AI Powered Financial Health Card for MSMEs
 
-An AI-powered Financial Health Card platform that evaluates the financial health and loan eligibility of Micro, Small, and Medium Enterprises (MSMEs) using financial and alternative business data. The system generates an explainable financial assessment to assist lenders and business owners in making informed credit decisions.
+> An AI-driven Financial Health Assessment System that evaluates the financial health and loan eligibility of MSMEs using Machine Learning, alternative financial data, and interactive analytics.
 
----
-
-## Overview
-
-Financial Health Card is a full-stack web application that leverages Machine Learning to analyze key financial indicators such as revenue, expenses, GST compliance, credit score, banking history, and UPI transactions. Based on these inputs, the application predicts a Financial Health Score, classifies business risk, estimates loan eligibility, and provides personalized recommendations.
-
-The platform focuses on delivering transparent and explainable AI-driven credit assessment in an intuitive and user-friendly interface.
-
----
-
-## Features
-
-- AI-based Financial Health Score Prediction
-- MSME Loan Eligibility Assessment
-- Risk Level Classification
-- Explainable AI Recommendations
-- Revenue vs Expense Visualization
-- Professional Financial Health Report
-- Responsive UI for Desktop and Mobile
-- Real-time Prediction through Flask REST API
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![React](https://img.shields.io/badge/React-19-61DAFB)
+![Flask](https://img.shields.io/badge/Flask-Backend-black)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38BDF8)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-success)
+![Status](https://img.shields.io/badge/Status-Active-success)
 
 ---
 
-## Technology Stack
+# 📌 Overview
 
-### Frontend
+The **AI Powered Financial Health Card** is a full-stack web application designed to simplify and accelerate MSME credit assessment. The system analyzes financial and alternative data such as GST compliance, UPI transactions, repayment history, credit score, revenue growth, and debt ratio to generate an AI-powered Financial Health Score along with loan eligibility and business insights.
+
+The solution combines Machine Learning with an intuitive web interface to assist financial institutions in making faster, transparent, and data-driven lending decisions.
+
+---
+
+# 🚀 Features
+
+- 🤖 AI-Powered Financial Health Score Prediction
+- 💳 Loan Eligibility Assessment
+- 📊 Interactive Analytics Dashboard
+- 📈 Revenue & Risk Visualization
+- 📑 Personalized Financial Recommendations
+- 📌 Risk Classification (Low / Medium / High)
+- 💼 Business Strength & Weakness Analysis
+- ⚡ Real-Time Prediction using Flask REST API
+- 🎨 Modern Responsive UI using React & Tailwind CSS
+- 🔗 Complete Full Stack Integration (React + Flask + Machine Learning)
+
+---
+
+# 🧠 Machine Learning Workflow
+
+```text
+Dataset
+      │
+      ▼
+Data Preprocessing
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Model Training
+      │
+      ▼
+Model Evaluation
+      │
+      ▼
+Saved ML Model (.pkl)
+      │
+      ▼
+Flask REST API
+      │
+      ▼
+React Frontend
+```
+
+---
+
+# 🏗️ System Architecture
+
+```text
+                 React Frontend
+                        │
+                        ▼
+               React Hook Form
+                        │
+                        ▼
+                   Axios API
+                        │
+                        ▼
+                 Flask Backend
+                        │
+                        ▼
+                  Predictor Module
+                        │
+                        ▼
+          Trained Machine Learning Model
+                        │
+                        ▼
+          Financial Health Prediction
+                        │
+                        ▼
+            AI Financial Health Card
+```
+
+---
+
+# 📊 Input Parameters
+
+The prediction model evaluates businesses using the following financial indicators:
+
+- Industry Type
+- Business Age
+- Monthly Revenue
+- Monthly Expense
+- GST Compliance Score
+- GST Turnover
+- UPI Transaction Count
+- UPI Transaction Amount
+- Employee Count
+- Existing Loan Amount
+- Monthly EMI
+- Credit Score
+- Debt-to-Income Ratio
+- Repayment History
+- Revenue Growth Percentage
+- Default Risk
+
+---
+
+# 📈 Prediction Output
+
+The AI model generates:
+
+- ✅ Financial Health Score
+- ✅ Loan Eligibility
+- ✅ Risk Level
+- ✅ Business Strengths
+- ✅ Business Weaknesses
+- ✅ Personalized Recommendations
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
 - React.js
-- Vite
 - Tailwind CSS
-- React Router
+- Shadcn UI
 - Framer Motion
+- React Hook Form
+- Axios
 - Recharts
+- Lucide React
 
-### Backend
+## Backend
+
 - Flask
 - Flask-CORS
-
-### Machine Learning
-- Python
-- Scikit-learn
-- XGBoost
 - Pandas
 - NumPy
 - Joblib
 
-### Deployment
-- Firebase Hosting (Frontend)
-- Render (Backend)
-- GitHub
+## Machine Learning
+
+- Scikit-Learn
+- Random Forest Regressor
+- Label Encoding
+- Model Serialization (.pkl)
 
 ---
 
-## System Architecture
+# 📂 Project Structure
 
-```
-                User
-                  │
-                  ▼
-      React + Tailwind Frontend
-                  │
-          HTTP REST API Request
-                  │
-                  ▼
-          Flask Backend (Render)
-                  │
-        Machine Learning Model
-                  │
-                  ▼
-      Financial Health Prediction
-                  │
-                  ▼
-    Health Score • Risk • Eligibility
-                  │
-                  ▼
-      Interactive Financial Report
-```
+```text
+FinancialHealthCard/
 
----
-
-## Workflow
-
-1. User enters business financial information.
-2. Frontend validates the inputs.
-3. Data is sent to the Flask REST API.
-4. Machine Learning model processes the data.
-5. Financial Health Score is predicted.
-6. Risk level and loan eligibility are calculated.
-7. Personalized recommendations are generated.
-8. Results are displayed as a Financial Health Card.
-
----
-
-## Project Structure
-
-```
-FinancialHealthCard
 │
-├── backend
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── services/
+│   ├── api/
+│   └── pages/
+│
+├── backend/
 │   ├── app.py
 │   ├── predictor.py
-│   ├── requirements.txt
-│   └── ...
+│   └── requirements.txt
 │
-├── frontend
-│   ├── src
-│   ├── public
-│   └── ...
+├── models/
+│   ├── financial_health_model.pkl
+│   ├── industry_encoder.pkl
+│   └── repayment_encoder.pkl
 │
-├── models
+├── dataset/
 │
 └── README.md
 ```
 
 ---
 
-## Live Demo
+# 📊 Model Performance
 
-(https://project-live-b2595.web.app)
-
-## Future Enhancements
-
-- PDF Financial Report Generation
-- User Authentication
-- Database Integration
-- Historical Assessment Tracking
-- Advanced Financial Analytics Dashboard
-- Multi-language Support
+| Metric | Performance |
+|---------|------------:|
+| **R² Score** | **0.9953** |
+| **Mean Absolute Error (MAE)** | **5.91** |
 
 ---
 
-## Developed By
+# 🎯 Future Enhancements
+
+- 📄 Downloadable PDF Financial Health Card
+- 🔐 User Authentication & Authorization
+- 📊 Personalized User Dashboard
+- 🏦 Multi-Bank Loan Comparison
+- 🧠 Explainable AI (XAI) Visualizations
+- ☁️ Cloud Deployment
+- 🌐 Multi-language Support
+- 🔗 GST & Banking API Integration
+- 📱 Mobile Responsive Enhancements
+- 📈 Historical Financial Trend Analysis
+
+---
+
+# 🌟 Project Highlights
+
+- Full Stack AI-Based Web Application
+- Machine Learning Powered Credit Assessment
+- Interactive Financial Dashboard
+- Explainable Business Insights
+- Modern Responsive UI/UX
+- REST API Architecture
+- Real-Time Prediction Pipeline
+- Production-Oriented Design
+
+---
+
+# 👩‍💻 Author
 
 **Mariya Shaikh**
 
+Aspiring Data Scientist | Machine Learning Enthusiast 
+
 ---
 
-## License
-
-This project is developed for academic and educational purposes.
+## ⭐ If you found this project useful, consider giving it a Star!
