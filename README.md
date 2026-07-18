@@ -222,7 +222,7 @@ FinancialHealthCard/
 - REST API Architecture
 - Real-Time Prediction Pipeline
 - Production-Oriented Design
-
+live demo : https://project-live-b2595.web.app/
 ---
 
 # 👩‍💻 Author
@@ -230,7 +230,6 @@ FinancialHealthCard/
 **Mariya Shaikh**
 
 Aspiring Data Scientist | Machine Learning Enthusiast 
-
 ---
 
 ## ⭐ If you found this project useful, consider giving it a Star!
